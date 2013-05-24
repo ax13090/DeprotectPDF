@@ -30,7 +30,7 @@ public class DeprotectMain {
 		final File inputFile;
 		try {
 			inputFile = new File(args[0]).getCanonicalFile();
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			Logger.getLogger(DeprotectMain.class.getName()).log(
 					Level.SEVERE,
 					"The input file path could not be constructed",
@@ -69,7 +69,7 @@ public class DeprotectMain {
 					"Unexpected IOException : the ouput file could not be created",
 					ex);
 			throw new RuntimeException(ex);
-		} catch (DocumentException ex) {
+		} catch (final DocumentException ex) {
 			Logger.getLogger(DeprotectMain.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
