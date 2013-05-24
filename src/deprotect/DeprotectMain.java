@@ -42,6 +42,10 @@ public class DeprotectMain {
 		final String filenameWithoutExtension = Files.getNameWithoutExtension(inputFile.getPath());
 		final File outputFile = new File(filenameWithoutExtension + "deprotected.pdf");
 		
+		/* Use the so-called "unethical-reading" flag to
+		   disable the password DRM */
+		PdfReader.unethicalreading = true;
+				
 		/* Instanciate a PDF reader provided by iPDF */
 		final PdfReader reader;
 		try {
