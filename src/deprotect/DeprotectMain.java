@@ -27,7 +27,7 @@ public class DeprotectMain {
 			throw new RuntimeException(ex);
 		}
 		final String filenameWithoutExtension = Files.getNameWithoutExtension(inputFile.getPath());
-		final File outputFile = new File(filenameWithoutExtension);
+		final File outputFile = new File(filenameWithoutExtension + "deprotected.pdf");
 		
 		
 		final PdfReader reader;
